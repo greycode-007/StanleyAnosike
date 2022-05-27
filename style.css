@@ -1,0 +1,996 @@
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-size: 16px;
+  font-family: Work Sans, sans-serif;
+
+}
+
+body,
+html {
+  overflow-x: hidden;
+}
+
+
+
+/* The menu Container */
+header {
+  width: 100%;
+  height: 100px;
+  line-height: 60px;
+  text-align: center;
+  font-family: sans-serif;
+  background-color: none;
+  color: white;
+  padding-top: 25px;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+/* Controls the left name, can be replaced with a logo */
+.brand {
+  width: auto;
+  height: 100%;
+  float: left;
+  margin: 0% 0 0 5%;
+}
+
+.brand img {
+  width: 50px;
+  height: 50px;
+}
+
+/* Configure the navigation bar*/
+.menu {
+  width: 60%;
+  height: 100%;
+  float: right;
+  overflow: hidden;
+}
+
+.menu ul {
+  width: 100%;
+  height: inherit;
+  margin: 0;
+  padding: 0;
+  display: -webkit-box;
+  /* OLD - iOS 6-, Safari 3.1-6 */
+  display: -ms-flexbox;
+  /* TWEENER - IE 10 */
+  display: -webkit-flex;
+  /* NEW - Chrome */
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 90px;
+}
+
+.menu ul a {
+  width: 13%;
+  height: inherit;
+  color: #080808;
+  display: inline-block;
+}
+
+.menu a:hover {
+  color: #262cd9;
+}
+
+#menuToggle {
+  display: none;
+}
+
+.menu-icon {
+  display: none;
+}
+
+
+
+.mainbtn {
+  display: flex;
+  align-items: center;
+  color: white;
+  background: none;
+  border: none;
+  padding: 20px 18px;
+  position: relative;
+  top: 7px;
+  cursor: pointer;
+  font-weight: 500;
+  background: #262cd9;
+  border-radius: 50px;
+  width: 110px;
+  height: 45px;
+}
+
+
+.mainbtn:hover{
+  color: white;
+  background-color: black;
+}
+.mainbtn i {
+  margin-right: 5px;
+  color: white;
+}
+.mainbtn:hover i {
+  color: white;
+}
+
+
+
+
+/* Mobile menu Media Quarie for mobile screens */
+@media screen and (max-width: 768px) {
+  header {
+    width: 100%;
+    height: 70px;
+  }
+
+  .brand {
+    width: auto;
+    height: 100%;
+    float: left;
+    margin: -1% 0 0 4%;
+  }
+
+  .brand img {
+    width: 45px;
+    height: 50px;
+  }
+
+  .menu {
+    width: 100%;
+    height: auto;
+    padding-top: 20px;
+  }
+
+  .menu ul {
+    display: block;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s;
+    padding-right: 0px;
+  }
+
+  .menu ul a {
+    text-align: left;
+    width: 92%;
+    height: 50px;
+    background-color: #262cd9;
+    padding: 0px 0px 5px 4%;
+    color: white;
+    border-radius: 5px;
+
+  }
+
+  .menu ul a:hover {
+    color: white;
+  }
+  
+  .menu-icon {
+    width: 100px;
+    height: inherit;
+    display: block;
+    position: absolute;
+    top: 22px;
+    right: 20px;
+    line-height: 60px;
+    color: #262cd9;
+    text-align: right;
+  }
+
+  #menuToggle:checked~ul {
+    max-height: 350px;
+
+  }
+
+  .menu-icon i {
+    font-size: 1.7em;
+  }
+
+  .mybutton {
+    border: none;
+    color: white;
+    padding: 0px;
+    text-align: left;
+  }
+}
+
+
+
+/* Whole container */
+.overall-container {
+  width: 100%;
+}
+
+/* First article container  */
+.hero-container {
+  text-align: center;
+  margin: 0;
+}
+
+/* child container / content container */
+.main-hero-container .hero-text-contain {
+  width: 75%;
+  margin: 0 auto;
+}
+
+
+
+
+
+.text-box{
+  overflow-x: hidden;
+  background:white;
+  padding:5px;
+}
+
+.text-box h1 {
+  font-size: 1.7rem;
+  font-weight: 600;
+  font-family: serif;
+  color:#fff;
+  position: relative;
+}
+
+.text-box h1::before, .text-box h1::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+}
+
+.text-box h1::before {
+  background: white;
+  animation:  type 3s steps(25) 1s forwards infinite;
+  width: 100%;
+}
+
+.text-box span{
+  color: #262cd9;
+  font-size: 2.6rem;
+}
+
+::after {
+  opacity: 1;
+  width: 2px; 
+  background: black;
+  color:#fff;
+  animation:  type 3s steps(25) 1s forwards infinite,
+              blink 0.6s steps(15) infinite;
+}
+
+@keyframes type {
+  to {
+    left: 110%;
+  }
+}
+
+@keyframes blink {
+  0% , 50%{
+    opacity: 0;
+  } 
+  51%, 100% {
+     opacity: 1;
+  }
+}
+
+
+/* Targeting its h1 text */
+.hero-container h1 {
+  font-family: "eurostile", sans-serif;
+  font-weight: 800;
+  margin: 0 auto;
+  color: #080808;
+  line-height: 1.125;
+  font-size: 2.6rem;
+  vertical-align: baseline;
+  letter-spacing: -1px;
+  overflow: hidden;
+}
+
+.hero-text-contain {
+  color: #080808;
+  padding-top: 7em;
+}
+
+/* Targeting its h3 text */
+.hero-text-contain h3 {
+  color: #080808;
+  font-weight: 400;
+  padding-top: 1em;
+  font-size: 1.4rem;
+}
+
+
+/* User icon Imager  */
+
+.user-icon {
+  padding-top: 4em;
+}
+
+.user-icon img {
+  width:200px;
+  height: 200px;
+  margin: auto;
+  border-radius: 60em;
+  border: 3px solid #7d81f3;
+  box-shadow: 20px #262cd9;
+  box-shadow: 0 8px 17px 2px white, 0 3px 14px 2px #262cd9, 0 5px 5px -3px #262cd9;
+}
+
+
+/* Dev tableimage  */
+.hero-image {
+  padding-top: 4.5em;
+}
+
+.hero-image img {
+  bottom: 0px;
+  display: block;
+  position: relative;
+  margin: auto;
+  left: 0;
+  right: 0;
+  text-align: center;
+}
+
+
+
+
+/* APLLIES TO ALL IMAGES */
+img {
+  max-width: 100%;
+  max-height: 100%;
+  margin: auto;
+}
+
+
+
+/* Article container, with two Section within */
+
+.datacontainer {
+  color: white;
+  height: auto;
+  background-color: #262cd9;
+
+}
+
+/* controls text */
+.hero-datamain {
+  width: 60%;
+  margin: 0 auto;
+  text-align: center;
+  text-align: justify;
+  padding-top: 3em;
+  padding-bottom: 16em;
+}
+
+.hero-datamain h1 {
+  text-align: center;
+  word-break: break-word;
+  color: white;
+  font-size: 22px;
+  font-weight: 800;
+  line-height: 1.125;
+  font-family: "eurostile", sans-serif;
+  padding-bottom: 20px;
+}
+
+.hero-datamain p {
+  text-align: center;
+  line-height: 1.7em;
+  font-size: 1.1em;
+}
+
+
+
+
+
+/* new article */
+
+.first-floated-container {
+  height: auto;
+  position: relative;
+  top: -190px;
+}
+
+.position-top {
+  position: relative;
+  top: -160px;
+}
+
+.float-row {
+  background-color: white;
+  box-shadow: 0 5px 5px 0 rgb(233 240 243 / 50%), 0 0 0 1px #e6ecf8;
+  opacity: 2;
+  margin-left: 40px;
+  margin-right: 40px;
+  border-radius: 6px;
+  color: #080808;
+  padding: 5px 5px;
+  border: 1px solid white;
+}
+
+.float-row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Create three equal columns that floats next to each other */
+.float-column1 {
+  float: left;
+  width: 33.33%;
+  height: auto;
+  text-align: center;
+  color: white;
+  padding: 0 20px;
+}
+
+.float-column1 img {
+  color: white;
+  margin-top: 1em;
+}
+
+.float-column1 h1 {
+  font-weight: 800;
+  font-size: 23px;
+  font-family: "eurostile", sans-serif;
+  color: #080808;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.float-column1 p {
+  color: #080808;
+  padding-bottom: 1.5em;
+  font-size: 1.1em;
+  line-height: 1.3em;
+  font-family: "eurostile", sans-serif;
+}
+
+.textsub :first-child {
+  color: #262cd9;
+  font-weight: 900;
+  font-size: 15px;
+  line-height: 0%;
+}
+
+
+
+
+/* New article container with Two sections */
+
+.portfolio {
+  text-align: center;
+  height: auto;
+  padding-top: 0em;
+  background-color: white;
+  color: black;
+}
+
+/* Used to positon "portfolio-hero" hero div Up */
+.portfolio-hero {
+  width: 100%;
+  line-height: 2.5em;
+  padding-top: 1em;
+}
+
+.portfolio-hero h1 {
+  font-weight: 800;
+  font-size: 24px;
+  color: #080808;
+}
+
+.portfolio-hero p {
+  font-size: 1.1em;
+}
+
+
+/* portfolio Jobs gallery image show */
+
+.layout-container-one {
+  padding-top: 1em;
+}
+
+.layout,
+.layout2 {
+  display: flex;
+  gap: 16px;
+  margin-left: 40px;
+  margin-right: 40px;
+}
+
+.layout i,
+.layout2 i {
+  font-size: 20px;
+  padding-right: 2px;
+}
+
+
+
+.grow1,
+.grow2 {
+  position: relative;
+  height: auto;
+  border-radius: 5px;
+  flex: 35%;
+  max-width: 35%;
+}
+
+.imageoverlay {
+  display: block;
+  width: 100%;
+  height: auto;
+} 
+
+
+/* The overlay effect - lays on top of the container and over the image */
+.overlay {
+  position: absolute;
+  bottom: 0;
+  background: rgb(0, 0, 0);
+  background: rgba(0, 0, 0, 0.5); /* Black see-through */
+  color: #f1f1f1;
+  width: 100%;
+  transition: .5s ease;
+  opacity:0;
+  color: white;
+  font-size: 20px;
+  padding: 20px;
+  text-align: center;
+}
+
+.btnspace{
+  padding-right: 5em;
+}
+
+
+/* When you mouse over the container, fade in the overlay title */
+.layout :hover .overlay {
+  opacity: 1;
+}
+
+.grow1 img,
+.grow2 img  {
+  border-radius: 6px;
+  box-shadow: 0 0 20px 2px rgba(10, 10, 3, 0.29);
+}
+
+.grow1 .btn,
+.grow2 .btn  {
+  color: white;
+  font-size: 16px;
+  padding: 6px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  text-align: center;
+  box-shadow: 0 0 20px 2px rgba(215, 218, 38, 0.29);
+  background-color: #171a87;;
+  border: 1px solid white;
+}
+
+.grow1 .btn:hover,
+.grow2 .btn:hover {
+  background-color: black;
+}
+
+/* Ends here */
+
+
+
+
+.table-container {
+  /* CONTACT CONTAINER */
+  background-color: #262cd9;
+  height: 600px;
+}
+
+/* Positioned container */
+.contact-box {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  margin: auto;
+  align-items: center;
+  margin-left: 40px;
+  margin-right: 40px;
+  flex-wrap: wrap;
+  background-color: sienna;
+  height: 200px;
+  text-align: center;
+  position: relative;
+  bottom: 100px;
+  border-radius: 6px;
+  background-color: #141c3a;
+  box-shadow: 0 0 20px 2px rgba(7, 7, 7, 0.29);
+}
+
+.col {
+  flex: 1;
+  margin: auto;
+  padding: 10px;
+  margin: 5px 10px;
+  color: white;
+}
+
+.col h2 {
+  font-size: 1.8rem;
+  font-weight: 900;
+}
+
+.col p {
+  font-size: 1.1em;
+  line-height: 1.4em;
+}
+
+#button {
+  border: none;
+  color: white;
+  padding: 15px 50px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 16px;
+  background-color: #141c3a;
+  border: 3px solid #262cd9;
+  border-radius: 50px;
+  box-shadow: 0 0 20px 2px rgba(196, 199, 13, 0.29);
+  font-size: 1.2em;
+}
+
+#button:hover {
+  color: black;
+  background-color: rgb(209, 195, 195);
+}
+/* Modal starts here */
+
+#modal {
+  display: none;
+  width: 100%;
+  height: 130%;
+  background-color: brown;
+  top: 0%;
+  left: 0%;
+  position: fixed;
+  z-index: 9999;
+}
+
+
+.closetwo{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.closetwo div{
+  padding-right: 20px;
+}
+
+.closeBtn {
+  cursor: pointer;
+  font-size: 50px;
+  color: #262cd9;
+}
+
+.closeBtn:hover {
+  color: white;
+}
+
+
+/* Contact Page CSS*/
+
+.contact{
+  height: 800px;
+  background-color: brown;
+}
+
+
+
+
+
+
+/* Footer content starts here */
+.footer-container {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.footer-container img {
+  width: 50px;
+  height: 50px;
+  text-align: center;
+}
+
+.footer-container p {
+  padding: 30px;
+  font-size: 1.6em;
+  width: 30%;
+  margin: auto;
+  color: white;
+}
+
+.socials {
+  padding-top: 25px;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.socials .fa {
+  font-size: 22px;
+  margin: 5px 10px;
+  padding: 10px 5px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 70px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  color: white;
+  cursor: pointer;
+}
+
+.socials .fa:hover {
+  color: #262cd9;
+  background-color: white;
+}
+
+.signature {
+  padding-top: 50px;
+  text-align: center;
+}
+
+.signature p {
+  font-size: 0.9em;
+  color: rgb(216, 205, 205);
+}
+
+
+
+
+
+form {
+  /* margin: 10%; */
+  width: 400px;
+  /* margin: 10% 40%; */
+}
+
+.containrr {
+  margin: 10% 30%;
+}
+
+
+textarea {
+  height: 300px;
+}
+
+
+
+/* EVERYTHING BELOW ARE ALL MEDIA QUARIES, TARGETING 991  AND 400 SCREENS.  */
+@media (max-width: 991px) {
+
+  .main-hero-container .hero-text-contain {
+    width: 95%;
+  }
+
+  .user-icon img {
+    width: 150px;
+    height: 150px;
+    margin: auto;
+  }
+
+  .hero-text-contain h1 {
+    font-size: 1.7em;
+    line-height: 1.3em;
+  }
+
+  .text-box span{
+    font-size: 1em;
+  }  
+
+  .hero-text-contain h3 {
+    width: 90%;
+    font-size: 18px;
+    margin: 0 auto;
+  }
+
+  .hero-image img {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  /* End of first article */
+
+  .hero-datamain {
+    width: 91%;
+    margin: 0 auto;
+    text-align: center;
+    text-align: justify;
+    padding-top: 3em;
+    padding-bottom: 16em;
+  }
+
+  .hero-datamain h1 {
+    font-size: 20px;
+  }
+
+
+  .float-row {
+    margin-left: 15px;
+    margin-right: 15px;
+    border-radius: 15px;
+    padding: 20px 10px;
+  }
+
+  .float-column1 h1 {
+    font-size: 20px;
+  }
+
+  .float-column1 {
+    width: 100%;
+    padding: 10px 10px 10px;
+
+  }
+
+  .textsub :first-child {
+    color: #262cd9;
+    font-weight: normal;
+    font-size: 15px;
+  }
+
+  .float-column1 img {
+    color: white;
+    margin-top: 0rem;
+  }
+
+  .line {
+    border-bottom: 1px solid rgb(244, 223, 223);
+
+  }
+
+  .float-column {
+    width: 100%;
+  }
+
+  /*     control the "MY RECENT WORK" Container */
+  .portfolio-hero {
+    text-align: center;
+    padding-bottom: 20px;
+    padding-top: 0;
+  }
+
+  .portfolio-hero h1 {
+    font-size: 20px;
+  }
+
+  .portfolio-hero p {
+    line-height: 1em;
+
+  }
+
+  .layout,
+  .layout2 {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .grow1,
+  .grow2 {
+    flex: 100%;
+    max-width: 100%;
+  }
+
+  .layout,
+  .layout2 {
+    display: flex;
+    gap: 16px;
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+
+
+
+  .contact-box {
+    flex-direction: column;
+    height: auto;
+    margin-left: 15px;
+    margin-right: 15px;
+    bottom: 115px;
+  }
+
+  .footer-container {
+    position: relative;
+    bottom: 60px;
+  }
+
+  .footer-container img {
+    width: 100px;
+    height: 70px;
+    text-align: center;
+  }
+
+  .footer-container p {
+    padding: 20px;
+    font-size: 1.6em;
+    width: 100%;
+    margin: auto;
+    color: white;
+  }
+
+  .table-container {
+    height: auto;
+  }
+
+  .socials {
+    position: relative;
+    bottom: 80px;
+  }
+
+  .signature {
+    position: relative;
+    bottom: 80px;
+  }
+}
+
+
+
+
+@media (max-width: 400px) {
+
+  .layout-container-one {
+    padding-top: 0px;
+  }
+
+  .hero-text-contain h1 {
+    font-size: 1.8em;
+    line-height: 1.3em;
+  }
+
+  .hero-text-contain h3 {
+    width: 90%;
+    font-size: 18px;
+    margin: 0 auto;
+  }
+
+  .user-icon img {
+    width: 150px;
+    height: 150px;
+  }
+
+  .footer-container p {
+    padding: 30px;
+    font-size: 1.4em;
+  }
+
+  .socials .fa {
+    font-size: 18px;
+    width: 35px;
+    margin: 5px;
+    padding: 6px;
+    text-decoration: none;
+    border-radius: 40px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    color: white;
+    cursor: pointer;
+  }
+
+  .signature {
+    padding-top: 30px;
+    text-align: center;
+  }
+
+}
