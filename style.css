@@ -40,12 +40,13 @@ li {
   width: auto;
   height: 100%;
   float: left;
-  margin: 0.5% 0 0 5%;
+  margin: -0% 0 0 5%;
 }
 
 .brand img {
   width: 50px;
   height: 50px;
+  z-index: 9999;
 }
 
 /* Configure the navigation bar*/
@@ -124,9 +125,6 @@ li {
   color: white;
 }
 
-
-
-
 /* Mobile menu Media Quarie for mobile screens */
 @media screen and (max-width: 768px) {
   header {
@@ -167,7 +165,7 @@ li {
     padding: 0px 0px 5px 4%;
     color: white;
     border-radius: 5px;
-
+    
   }
 
   .menu ul a:hover {
@@ -184,6 +182,7 @@ li {
     line-height: 60px;
     color: #262cd9;
     text-align: right;
+    cursor: pointer;
   }
 
   #menuToggle:checked~ul {
@@ -215,10 +214,172 @@ li {
 
 
 
-/* Whole container */
-.overall-container {
-  width: 100%;
+
+/* Modal starts here */
+#modal {
+  display: none;
+  background-color: brown;
+  top: 0%;
+  left: 0%;
+  z-index: 9999;
+  position: fixed;
+  overflow-x: hidden;
+  overflow: hidden;
+   top: 0%;
+   overflow: auto;
+   width: 100%;
+   height: 100%;
 }
+
+
+
+.closetwo{
+  display: flex;
+  flex-direction: row;
+  padding-top: 20px;
+  width: 100%;
+  background-color: white;
+  padding-bottom: 10px;
+}
+
+.closetwo div:first-child{
+  background-color: none;
+  width: 50%;
+  height: 50%;
+  text-align: left;
+  padding-left: 2rem;
+}
+.modal-logo img{
+height: 50px;
+width: 20%;
+max-width: 100px;
+}
+
+
+.closetwo div:nth-child(2){
+  background-color: none;
+  width: 50%;
+  text-align: right;
+  padding-right: 6rem;
+}
+.closeBtn {
+  cursor: pointer;
+  color: #262cd9;
+}
+
+
+/* Modal content container */
+.modal-content{
+  background-color: white;
+  border-top: 1px solid rgb(222, 212, 212);
+  color: black;
+  text-align: center;
+  height: auto;
+}
+
+/* Modal Icon image */
+.modal-icon img {
+  position: relative;
+  bottom: 40px;
+  width:90px;
+  height: 90px;
+  margin: auto;
+  border-radius: 60em;
+  border: 3px solid #7d81f3;
+  box-shadow: 20px #262cd9;
+  box-shadow: 0 8px 17px 2px white, 0 3px 14px 2px #262cd9, 0 5px 5px -3px #262cd9;
+}
+
+.modal-content h1{
+  width: 55%;
+  display: flex;
+  margin: auto;
+  color: #363636;
+  font-size: 2.4rem;
+  font-weight: 500;
+  line-height: 1.2;
+  padding-bottom: 5%;
+}
+
+.form-container{
+  width: 100%;
+  height: auto;
+  padding-bottom: 40px;
+}
+
+
+.columns-is-centered{
+  width: 50%;
+  margin: auto;
+}
+
+/* Name and Email box width */
+.input-inline{
+float: left;
+ width: 50%;
+ color: white;
+ text-align: left;
+}
+ 
+label{
+  color: rgb(80, 79, 79);
+}
+/* Middle Padding */
+.input-inline:first-child{
+ padding-right: 20px;
+}
+ 
+
+
+/* Message Box */
+.message-box{
+  float: left;
+   width: 100%;
+   color: white;
+   text-align: left;
+  }
+
+input[type=text], input[type=email]  {
+  width: 100%;
+  height: 50px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+  outline: none;
+}
+
+
+input[type=textarea], select, textarea {
+  width: 100%;
+  border: 1px solid #ccc;
+  resize: vertical;
+  outline: none;
+} 
+input[type=submit]:hover {
+  background-color: #262cd9;
+  color: white;
+}
+
+input[type=submit] {
+  background-color: white;
+  color: #262cd9;
+  padding: 12px 50px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  border-radius: 10px;
+  border: 2px solid #262cd9;
+}
+
+
+
+
+
+
+
+
+
+
 
 /* First article container  */
 .hero-container {
@@ -265,12 +426,7 @@ li {
 }
 
 
-
-
-
-
 /* User icon Imager  */
-
 .user-icon {
   padding-top: 4em;
 }
@@ -342,6 +498,7 @@ img {
   font-family: "eurostile", sans-serif;
   padding-bottom: 20px;
 }
+
 
 .hero-datamain p {
   text-align: center;
@@ -614,51 +771,6 @@ img {
   color: black;
   background-color: rgb(209, 195, 195);
 }
-/* Modal starts here */
-
-#modal {
-  display: none;
-  width: 100%;
-  height: 130%;
-  background-color: brown;
-  top: 0%;
-  left: 0%;
-  position: fixed;
-  z-index: 9999;
-}
-
-
-.closetwo{
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
-}
-
-.closetwo div{
-  padding-right: 20px;
-}
-
-.closeBtn {
-  cursor: pointer;
-  font-size: 50px;
-  color: #262cd9;
-}
-
-.closeBtn:hover {
-  color: white;
-}
-
-
-/* Contact Page CSS*/
-
-.contact{
-  height: 800px;
-  background-color: brown;
-}
-
-
-
-
 
 
 /* Footer content starts here */
@@ -742,6 +854,41 @@ textarea {
 /* EVERYTHING BELOW ARE ALL MEDIA QUARIES, TARGETING 991  AND 400 SCREENS.  */
 @media (max-width: 991px) {
 
+  .modal-logo img{
+    height: 45px;
+    width: 50%;
+    max-width: 100px;
+    }
+    
+  /* contact modal buttons */
+  .closetwo div:first-child{
+    padding-left: 0.6rem;
+    padding-top: 1px;
+  }
+.closetwo div:nth-child(2){
+  padding-right: 0.8rem;
+  padding-top: 0px;
+}
+/* Name and Email box width */
+.input-inline {
+   width: 100%;
+  }
+
+  .modal-content h1{
+    font-size: 1.7em;
+    width: 100%;
+  }
+
+  /* Remove input box Middle Padding on small screens*/
+.input-inline:first-child{
+  padding-right: 0px;
+ }
+ 
+ 
+/* Form input field control */
+.columns-is-centered{
+  width: 94%;
+}
   .main-hero-container .hero-text-contain {
     width: 95%;
   }
@@ -845,6 +992,10 @@ textarea {
   .layout2 {
     flex-direction: column;
     gap: 16px;
+    display: flex;
+    gap: 16px;
+    margin-left: 15px;
+    margin-right: 15px;
   }
 
   .grow1,
@@ -853,15 +1004,12 @@ textarea {
     max-width: 100%;
   }
 
-  .layout,
-  .layout2 {
-    display: flex;
-    gap: 16px;
-    margin-left: 15px;
-    margin-right: 15px;
-  }
-
-
+  .grow1 .btn,
+.grow2 .btn  {
+  font-size: 11px;
+  padding: 10px;
+}
+ 
 
   .contact-box {
     flex-direction: column;
@@ -908,6 +1056,27 @@ textarea {
 
 
 @media (max-width: 400px) {
+
+  .modal-logo img{
+    height: 45px;
+    width: 60%;
+    max-width: 100px;
+    }
+    
+  /* contact modal buttons */
+  .closetwo div:first-child{
+    padding-left: 0.5rem;
+    padding-top: 1px;
+  }
+.closetwo div:nth-child(2){
+  padding-right: 0.8rem;
+  padding-top: 0px;
+}
+
+.modal-content h1{
+  font-size: 1.4em;
+  width: 90%;
+}
 
   .layout-container-one {
     padding-top: 0px;
