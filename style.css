@@ -1,15 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
 
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
   font-size: 16px;
-  font-family: Work Sans, sans-serif;
-
+  font-family: 'Poppins', sans-serif;
 }
 
 body,
 html {
+  
   overflow-x: hidden;
 }
 
@@ -21,7 +22,6 @@ header {
   height: 100px;
   line-height: 60px;
   text-align: center;
-  font-family: sans-serif;
   background-color: none;
   color: white;
   padding-top: 25px;
@@ -55,7 +55,7 @@ li {
   height: 100%;
   float: right;
   overflow: hidden;
-  
+
 }
 
 .menu ul {
@@ -101,7 +101,7 @@ li {
   color: white;
   background: none;
   border: none;
-  padding: 20px 18px;
+  padding: 20px 13px;
   position: relative;
   top: 7px;
   cursor: pointer;
@@ -113,14 +113,16 @@ li {
 }
 
 
-.mainbtn:hover{
+.mainbtn:hover {
   color: white;
   background-color: black;
 }
+
 .mainbtn i {
   margin-right: 5px;
   color: white;
 }
+
 .mainbtn:hover i {
   color: white;
 }
@@ -165,13 +167,13 @@ li {
     padding: 0px 0px 5px 4%;
     color: white;
     border-radius: 5px;
-    
+
   }
 
   .menu ul a:hover {
     color: black;
   }
-  
+
   .menu-icon {
     width: 100px;
     height: inherit;
@@ -206,9 +208,10 @@ li {
     background: #262cd9;
     border-radius: 0px;
   }
-  .mainbtn:hover{
+
+  .mainbtn:hover {
     color: none;
-    background-color:#262cd9;
+    background-color: #262cd9;
   }
 }
 
@@ -223,17 +226,16 @@ li {
   left: 0%;
   z-index: 9999;
   position: fixed;
-  overflow-x: hidden;
-  overflow: hidden;
-   top: 0%;
-   overflow: auto;
-   width: 100%;
-   height: 100%;
+  top: 0%;
+  overflow: auto;
+  width: 100%;
+  height: 100%;
+
 }
 
 
 
-.closetwo{
+.closetwo {
   display: flex;
   flex-direction: row;
   padding-top: 20px;
@@ -242,26 +244,28 @@ li {
   padding-bottom: 10px;
 }
 
-.closetwo div:first-child{
+.closetwo div:first-child {
   background-color: none;
   width: 50%;
   height: 50%;
   text-align: left;
   padding-left: 2rem;
 }
-.modal-logo img{
-height: 50px;
-width: 20%;
-max-width: 100px;
+
+.modal-logo img {
+  height: 50px;
+  width: 20%;
+  max-width: 100px;
 }
 
 
-.closetwo div:nth-child(2){
+.closetwo div:nth-child(2) {
   background-color: none;
   width: 50%;
   text-align: right;
   padding-right: 6rem;
 }
+
 .closeBtn {
   cursor: pointer;
   color: #262cd9;
@@ -269,7 +273,7 @@ max-width: 100px;
 
 
 /* Modal content container */
-.modal-content{
+.modal-content {
   background-color: white;
   border-top: 1px solid rgb(222, 212, 212);
   color: black;
@@ -281,7 +285,7 @@ max-width: 100px;
 .modal-icon img {
   position: relative;
   bottom: 40px;
-  width:90px;
+  width: 90px;
   height: 90px;
   margin: auto;
   border-radius: 60em;
@@ -290,7 +294,7 @@ max-width: 100px;
   box-shadow: 0 8px 17px 2px white, 0 3px 14px 2px #262cd9, 0 5px 5px -3px #262cd9;
 }
 
-.modal-content h1{
+.modal-content h1 {
   width: 55%;
   display: flex;
   margin: auto;
@@ -301,45 +305,47 @@ max-width: 100px;
   padding-bottom: 5%;
 }
 
-.form-container{
+.form-container {
   width: 100%;
   height: auto;
   padding-bottom: 40px;
 }
 
 
-.columns-is-centered{
+.columns-is-centered {
   width: 50%;
   margin: auto;
 }
 
 /* Name and Email box width */
-.input-inline{
-float: left;
- width: 50%;
- color: white;
- text-align: left;
+.input-inline {
+  float: left;
+  width: 50%;
+  color: white;
+  text-align: left;
 }
- 
-label{
+
+label {
   color: rgb(80, 79, 79);
 }
+
 /* Middle Padding */
-.input-inline:first-child{
- padding-right: 20px;
+.input-inline:first-child {
+  padding-right: 20px;
 }
- 
+
 
 
 /* Message Box */
-.message-box{
+.message-box {
   float: left;
-   width: 100%;
-   color: white;
-   text-align: left;
-  }
+  width: 100%;
+  color: white;
+  text-align: left;
+}
 
-input[type=text], input[type=email]  {
+input[type=text],
+input[type=email] {
   width: 100%;
   height: 50px;
   border: 1px solid #ccc;
@@ -349,12 +355,15 @@ input[type=text], input[type=email]  {
 }
 
 
-input[type=textarea], select, textarea {
+input[type=textarea],
+select,
+textarea {
   width: 100%;
   border: 1px solid #ccc;
   resize: vertical;
   outline: none;
-} 
+}
+
 input[type=submit]:hover {
   background-color: #262cd9;
   color: white;
@@ -363,12 +372,16 @@ input[type=submit]:hover {
 input[type=submit] {
   background-color: white;
   color: #262cd9;
-  padding: 12px 50px;
+  padding: 10px 20px;
+  margin: 4px 2px;
   border: none;
   border-radius: 4px;
   cursor: pointer;
   border-radius: 10px;
   border: 2px solid #262cd9;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
 }
 
 
@@ -388,7 +401,7 @@ input[type=submit] {
 }
 
 /* content container */
- .hero-text-contain {
+.hero-text-contain {
   width: 75%;
   margin: 0 auto;
 }
@@ -402,7 +415,6 @@ input[type=submit] {
 
 /* Targeting its h1 text */
 .hero-container h1 {
-  font-family: "eurostile", sans-serif;
   font-weight: 800;
   margin: 0 auto;
   color: #080808;
@@ -411,7 +423,7 @@ input[type=submit] {
   letter-spacing: -1px;
 }
 
-.text-box span{
+.text-box span {
   color: black;
   font-size: 2.6rem;
 }
@@ -432,7 +444,7 @@ input[type=submit] {
 }
 
 .user-icon img {
-  width:200px;
+  width: 200px;
   height: 200px;
   margin: auto;
   border-radius: 60em;
@@ -495,7 +507,6 @@ img {
   font-size: 22px;
   font-weight: 800;
   line-height: 1.125;
-  font-family: "eurostile", sans-serif;
   padding-bottom: 20px;
 }
 
@@ -560,7 +571,6 @@ img {
 .float-column1 h1 {
   font-weight: 800;
   font-size: 23px;
-  font-family: "eurostile", sans-serif;
   color: #080808;
   margin-top: 1rem;
   margin-bottom: 1rem;
@@ -571,7 +581,6 @@ img {
   padding-bottom: 1.5em;
   font-size: 1.1em;
   line-height: 1.3em;
-  font-family: "eurostile", sans-serif;
 }
 
 .textsub :first-child {
@@ -647,7 +656,7 @@ img {
   display: block;
   width: 100%;
   height: auto;
-} 
+}
 
 
 /* The overlay effect - lays on top of the container and over the image */
@@ -655,18 +664,19 @@ img {
   position: absolute;
   bottom: 0;
   background: rgb(0, 0, 0);
-  background: rgba(0, 0, 0, 0.5); /* Black see-through */
+  background: rgba(0, 0, 0, 0.5);
+  /* Black see-through */
   color: #f1f1f1;
   width: 100%;
   transition: .5s ease;
-  opacity:0;
+  opacity: 0;
   color: white;
   font-size: 20px;
   padding: 20px;
   text-align: center;
 }
 
-.btnspace{
+.btnspace {
   padding-right: 5em;
 }
 
@@ -677,13 +687,13 @@ img {
 }
 
 .grow1 img,
-.grow2 img  {
+.grow2 img {
   border-radius: 6px;
   box-shadow: 0 0 20px 2px rgba(10, 10, 3, 0.29);
 }
 
 .grow1 .btn,
-.grow2 .btn  {
+.grow2 .btn {
   color: white;
   font-size: 16px;
   padding: 6px;
@@ -692,7 +702,8 @@ img {
   border-radius: 5px;
   text-align: center;
   box-shadow: 0 0 20px 2px rgba(215, 218, 38, 0.29);
-  background-color: #171a87;;
+  background-color: #171a87;
+  ;
   border: 1px solid white;
 }
 
@@ -760,7 +771,7 @@ img {
   margin: 4px 2px;
   cursor: pointer;
   border-radius: 16px;
-  background-color: #141c3a;
+  background-color: #262cd9; 
   border: 3px solid #262cd9;
   border-radius: 50px;
   box-shadow: 0 0 20px 2px rgba(196, 199, 13, 0.29);
@@ -768,8 +779,8 @@ img {
 }
 
 #button:hover {
-  color: black;
-  background-color: rgb(209, 195, 195);
+  color: white;
+  background-color: #141c3a;
 }
 
 
@@ -788,7 +799,7 @@ img {
 
 .footer-container p {
   padding: 30px;
-  font-size: 1.6em;
+  font-size: 1.3em;
   width: 30%;
   margin: auto;
   color: white;
@@ -854,51 +865,45 @@ textarea {
 /* EVERYTHING BELOW ARE ALL MEDIA QUARIES, TARGETING 991  AND 400 SCREENS.  */
 @media (max-width: 991px) {
 
-  .modal-logo img{
+  .modal-logo img {
     height: 45px;
     width: 50%;
     max-width: 100px;
-    }
-    
+  }
+
   /* contact modal buttons */
-  .closetwo div:first-child{
+  .closetwo div:first-child {
     padding-left: 0.6rem;
     padding-top: 1px;
   }
-.closetwo div:nth-child(2){
-  padding-right: 0.8rem;
-  padding-top: 0px;
-}
-/* Name and Email box width */
-.input-inline {
-   width: 100%;
+
+  .closetwo div:nth-child(2) {
+    padding-right: 0.8rem;
+    padding-top: 0px;
   }
 
-  .modal-content h1{
+  /* Name and Email box width */
+  .input-inline {
+    width: 100%;
+  }
+
+  .modal-content h1 {
     font-size: 1.7em;
     width: 100%;
   }
 
   /* Remove input box Middle Padding on small screens*/
-.input-inline:first-child{
-  padding-right: 0px;
- }
- 
- input[type=submit] {
-  background-color: white;
-  color: #262cd9;
-  padding: 12px 50px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  border-radius: 10px;
-  border: 2px solid #262cd9;
-}
+  .input-inline:first-child {
+    padding-right: 0px;
+  }
 
-/* Form input field control */
-.columns-is-centered{
-  width: 94%;
-}
+ 
+
+  /* Form input field control */
+  .columns-is-centered {
+    width: 94%;
+  }
+
   .main-hero-container .hero-text-contain {
     width: 95%;
   }
@@ -914,9 +919,9 @@ textarea {
     line-height: 1.3em;
   }
 
-  .text-box span{
+  .text-box span {
     font-size: 1.7em;
-  }  
+  }
 
   .hero-text-contain h3 {
     width: 90%;
@@ -1015,11 +1020,11 @@ textarea {
   }
 
   .grow1 .btn,
-.grow2 .btn  {
-  font-size: 11px;
-  padding: 10px;
-}
- 
+  .grow2 .btn {
+    font-size: 14px;
+    padding: 10px;
+  }
+
 
   .contact-box {
     flex-direction: column;
@@ -1067,26 +1072,27 @@ textarea {
 
 @media (max-width: 400px) {
 
-  .modal-logo img{
+  .modal-logo img {
     height: 45px;
     width: 60%;
     max-width: 100px;
-    }
-    
+  }
+
   /* contact modal buttons */
-  .closetwo div:first-child{
+  .closetwo div:first-child {
     padding-left: 0.5rem;
     padding-top: 1px;
   }
-.closetwo div:nth-child(2){
-  padding-right: 0.8rem;
-  padding-top: 0px;
-}
 
-.modal-content h1{
-  font-size: 1.4em;
-  width: 90%;
-}
+  .closetwo div:nth-child(2) {
+    padding-right: 0.8rem;
+    padding-top: 0px;
+  }
+
+  .modal-content h1 {
+    font-size: 1.4em;
+    width: 90%;
+  }
 
   .layout-container-one {
     padding-top: 0px;
@@ -1113,10 +1119,12 @@ textarea {
     font-size: 1.2em;
     width: 90%;
   }
-.footer-container img{
-  width: 45px;
-  height: 50px;
-}
+
+  .footer-container img {
+    width: 45px;
+    height: 50px;
+  }
+
   .socials .fa {
     font-size: 18px;
     width: 35px;
@@ -1133,9 +1141,10 @@ textarea {
     padding-top: 30px;
     text-align: center;
   }
+
   .portfolio-hero p {
     line-height: 1.3em;
-   margin-left: 15px;
-   margin-right: 15px;
+    margin-left: 15px;
+    margin-right: 15px;
   }
 }
